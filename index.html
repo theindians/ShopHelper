@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shop Helper - Home</title>
   <style>
     * {
@@ -88,6 +89,10 @@
       background-color: #0056b3;
     }
 
+    a {
+      text-decoration: none;
+    }
+
     @media (max-width: 600px) {
       .card {
         width: 90%;
@@ -95,46 +100,37 @@
     }
   </style>
 </head>
+
 <body>
 
   <h1>🛠️ Shop Helper Dashboard</h1>
 
   <div class="container">
     <!-- ImagePrint Card -->
-    <div class="card">
-      <img src="./assets/imgs/image_print.png" alt="ImagePrint Preview" />
-      <div class="card-content">
-        <h2>📸 ImagePrint</h2>
-        <p>Effortlessly create passport-size photos, auto-arranged with name/date options.</p>
-        <button onclick="goToImagePrint()">Open ImagePrint</button>
+    <a href="./ImagePrint/index.html">
+      <div class="card">
+        <img src="./assets/imgs/image_print.png" alt="ImagePrint Preview" />
+        <div class="card-content">
+          <h2>📸 ImagePrint</h2>
+          <p>Effortlessly create passport-size photos, auto-arranged with name/date options.</p>
+          <button>Open ImagePrint</button>
+        </div>
       </div>
-    </div>
+    </a>
 
     <!-- CardPrint Card -->
-    <div class="card">
-      <img src="./assets/imgs/card_print.png" alt="CardPrint Preview" />
-      <div class="card-content">
-        <h2>💳 CardPrint</h2>
-        <p>Paste front & back of cards. Auto-arranged in card-size format like Aadhaar.</p>
-        <button onclick="goToCardPrint()">Open CardPrint</button>
+    <a href="./CardPrint/index.html">
+      <div class="card">
+        <img src="./assets/imgs/card_print.png" alt="CardPrint Preview" />
+        <div class="card-content">
+          <h2>💳 CardPrint</h2>
+          <p>Paste front & back of cards. Auto-arranged in card-size format like Aadhaar.</p>
+          <button>Open CardPrint</button>
+        </div>
       </div>
-    </div>
+    </a>
   </div>
 
-  <script>
-    const cardButtons = document.querySelectorAll(".card")
-    const url = window.location.origin + "/src/apps";
-    const appsName = [
-      "/ImagePrint",
-      "/CardPrint",
-    ]
-
-    cardButtons.forEach((btn, idx)=>{ 
-      btn.addEventListener('click', ()=>{
-        window.location.href = url + appsName[idx];
-      })
-    })
-  </script>
-
 </body>
+
 </html>
