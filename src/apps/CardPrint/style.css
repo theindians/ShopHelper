@@ -1,0 +1,144 @@
+body {
+    display: flex;
+    align-items: center;
+    background-color: #212529 !important;
+    color: white !important;
+}
+
+.form-signin {
+    max-width: 700px;
+    padding-top: 15px;
+    margin: auto;
+}
+
+#inp {
+    font-weight: bold;
+}
+
+.form-signin .checkbox {
+    font-weight: 400;
+}
+
+.form-signin .form-floating:focus-within {
+    z-index: 2;
+}
+
+@page {
+    margin-top: 0.25in;
+    margin-bottom: 0.25in;
+    margin-right: 0.25in;
+    margin-left: 0.25in;
+}
+
+.imgSize {
+    height: 2.1in;
+    width: 3.3in;
+    border: 1px solid gold;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+img {
+    height: 2.1in;
+    width: 3.3in;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #printSection,
+    #printSection * {
+        visibility: visible;
+    }
+
+    .form-signin {
+        padding: 0;
+    }
+
+    .imgSize {
+        border: 1px solid black;
+    }
+}
+
+.bColorG {
+    background: rgb(0, 119, 0) !important;
+}
+
+.bColorR {
+    background: rgb(138, 0, 0) !important;
+}
+
+#printSection {
+    display: flex;
+}
+
+.add {
+    margin-top: 10px !important;
+    width: 300px !important;
+    margin-left: 20px;
+}
+
+li {
+    list-style-type: none;
+}
+
+@page {
+    margin-top: 0.25in;
+    margin-left: 0.81in;
+}
+
+#marginTime {
+    margin-right: 0px;
+}
+
+.checkbox {
+    margin-top: 20px;
+}
+
+#round {
+    font-size: 15pt;
+}
+
+.margin-btns {
+    width: 80%;
+    display: flex;
+    margin: auto;
+}
+
+.margin-btns>button {
+    height: min-content;
+}
+
+/* For mobile privew */
+@media only screen and (max-width: 655px) {
+    #printSection {
+        flex-direction: column;
+    }
+
+    .imgSize {
+        margin-bottom: 0;
+    }
+
+    .checkbox {
+        margin-top: 2px;
+    }
+
+    .add {
+        margin-left: 0;
+    }
+
+    .margin-btns {
+        justify-content: space-between;
+        width: 320px;
+    }
+
+    .margin-btns>button {
+        width: 155px !important;
+    }
+
+    .print-btn {
+        width: 300px !important;
+    }
+}
